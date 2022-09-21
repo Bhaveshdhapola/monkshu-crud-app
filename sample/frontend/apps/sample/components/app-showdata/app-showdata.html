@@ -1,0 +1,78 @@
+<div id="app-showdata">
+    <div id="inputs">
+        <input type="text" name="name" id="name" placeholder="Enter the name" required="true" />
+        <!-- <input type="text" name="category" id="category" placeholder="Enter book category" required="true" /> -->
+        <input type="text" name="age" id="age" placeholder="Enter the age" required="true" />
+        <input type="button" value="Add User" id="add-user-details"
+            onclick="monkshu_env.components['app-showdata'].addUser()" />
+        <input type="button" value="Get All User" id="get-user-details"
+            onclick="monkshu_env.components['app-showdata'].getAllUser()" />
+        <input type="button" value="Update Changes" id="update-user-details"
+            onclick="monkshu_env.components['app-showdata'].updateUser()" />
+        <!-- <input type="button" value="Get Data" id="data" onclick="monkshu_env.components['app-showdata'].addData()"/> -->
+        <!-- <div id="users"></div> -->
+    </div>
+    <div id="user-table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="users">
+            </tbody>
+        </table>
+    </div>
+    <div id="selected_user_id"></div>
+</div>
+
+<style>
+    #inputs {
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    #update-user-details {
+        display: none;
+    }
+
+    #user-table {
+        display: flex;
+        justify-content: center;
+        padding: 30px;
+    }
+
+    table {
+        border: 1px solid black;
+        padding: 10px;
+        border-collapse: separate;
+        border-spacing: 20px 10px;
+    }
+
+    tr {
+        font-size: 25px;
+    }
+
+    th,
+    td {
+        border: 1px solid black;
+        padding: 5px;
+        text-align: center;
+    }
+
+    input[type='text'] {
+        font-size: 16px;
+        padding-left: 5px;
+    }
+
+    input[type='button'] {
+        font-size: 16px;
+    }
+
+    #selected_user_id {
+        display: none;
+    }
+</style>

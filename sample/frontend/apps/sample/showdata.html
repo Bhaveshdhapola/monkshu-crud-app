@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{i18n.Title}}</title>
+    <style>
+        body {
+            background-color: #fff5e6;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+    <script type="module">
+        import { app_showdata } from "./components/app-showdata/app-showdata.mjs"; app_showdata.register();
+    </script>
+</head>
+
+<body>
+    <h1>User Details</h1>
+    <app-showdata></app-showdata>
+</body>
+
+</html>

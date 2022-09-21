@@ -1,0 +1,9 @@
+{
+    "/apis/message": "/apis/message.js?needsToken=false&addsToken=sub:access",
+    "/apis/showuser": "/apis/showuser.js?needsToken=false&addsToken=sub:access",
+    "/apis/adduser": "/apis/adduser.js?needsToken=false&addsToken=sub:access",
+    "/apis/updateuser": "/apis/updateuser.js?needsToken=false&addsToken=sub:access",
+    "/apis/deleteuser": "/apis/deleteuser.js?needsToken=false&addsToken=sub:access",
+    "/apis/getuserbyid": "/apis/getuserbyid.js?needsToken=false&addsToken=sub:access"
+
+}
