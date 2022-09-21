@@ -3,17 +3,12 @@
 * License: MIT - see enclosed LICENSE file.
 */
 
-// const { APPROOTDIR } = require("../../../server/lib/constants");
-
 // Custom modules
-// console.log(APPROOTDIR)
 const { simpleUpdate } = require('../db/db')
-const API_CONSTANTS =
-    require(`${CONSTANTS.APPROOTDIR}/sample/apis/lib/constants`);
+const API_CONSTANTS = require(`${CONSTANTS.APPROOTDIR}/sample/apis/lib/constants`);
 exports.doService = async jsonReq => {
     // Validate API request and check mandatory payload required
-    if (!validateRequest(jsonReq)) return
-    API_CONSTANTS.API_INSUFFICIENT_PARAMS;
+    if (!validateRequest(jsonReq)) return API_CONSTANTS.API_INSUFFICIENT_PARAMS;
     try {
         const test = await updateUser(jsonReq);
         if (!test) return API_CONSTANTS.API_RESPONSE_FALSE;
@@ -25,18 +20,9 @@ exports.doService = async jsonReq => {
 }
 const updateUser = async (jsonReq) => {
     try {
-        // const data = [];
-        // let res = JSON.parse(jsonReq);
         if (jsonReq) {
             const query = `UPDATE employees SET name=?, age=? where id = ?`;
-            // console.log(jsonReq)
-            // const select = 'SELECT * FROM employees';
-            // return "hey";
             return simpleUpdate(query, [jsonReq.name, jsonReq.age, jsonReq.id]);
-            // return simpleInsert('employees', { name: jsonReq.name, age: jsonReq.age });
-
-            // return data;
-            // return "This is your first API";
         }
     } catch (error) {
         console.log(jsonReq)
@@ -44,17 +30,4 @@ const updateUser = async (jsonReq) => {
     }
 }
 
-// const getAllData = async (jsonReq) => {
-//     try {
-//         // const data = [];
-//         if (jsonReq) {
-//             // const select = 'SELECT * FROM employees';
-//             // return simpleSelect(select).then(res => {return res});
-//             // return data;
-//             return "This is your first API";
-//         }
-//     } catch (error) {
-//         throw error;
-//     }
-// }
 const validateRequest = jsonReq => (jsonReq);

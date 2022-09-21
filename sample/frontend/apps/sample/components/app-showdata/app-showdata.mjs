@@ -79,8 +79,6 @@ const getUserDataByID = async (id) => {
 *  @param {number} id - to find the user by id for update details
 */
 const updateUser = async () => {
-    // let id = app_showdata.shadowRoot.querySelector("#selected_user_id");
-    // console.log( app_showdata.shadowRoot.querySelector("#selected_user_id").innerText)
     let name = app_showdata.shadowRoot.querySelector("#name").value;
     let age = app_showdata.shadowRoot.querySelector("#age").value;
     if (!name || !age) {

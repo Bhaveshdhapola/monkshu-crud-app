@@ -4,11 +4,13 @@
  */
 
 // Custom modules
+
 // const mysql = require(`${CONSTANTS.APPROOTDIR}/sample/3p/node_modules/mysql`);
-const mysql = require('../3p/node_modules/mysql2');
 // const utils = require(`${API_CONSTANTS.LIB_PATH}/utils`);
-const utils = require('../apis/lib/utils');
 // const mysqlConfig = require(`${CONSTANTS.APPROOTDIR}/sample/conf/config`).MYSQL;
+
+const mysql = require('../3p/node_modules/mysql2');
+const utils = require('../apis/lib/utils');
 const mysqlConfig = require('../conf/config');
 
 /**
@@ -333,7 +335,6 @@ const consecutiveUpdate = (connection, query, queryParams) => {
         try {
             const connection = await getConnection();
             if (!connection) return reject("Connection not found");
-            // const query = `UPDATE employees SET name=? where id = ?`;
             // Use the connection
             const queryStats = connection.query(query, queryParams, (error, results) => {
                 // When done with the connection, release it.

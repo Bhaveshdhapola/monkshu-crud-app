@@ -7,12 +7,10 @@
 
 // Custom modules
 // console.log(APPROOTDIR)
-const API_CONSTANTS =
-    require(`${CONSTANTS.APPROOTDIR}/sample/apis/lib/constants`);
+const API_CONSTANTS = require(`${CONSTANTS.APPROOTDIR}/sample/apis/lib/constants`);
 exports.doService = async jsonReq => {
     // Validate API request and check mandatory payload required
-    if (!validateRequest(jsonReq)) return
-    API_CONSTANTS.API_INSUFFICIENT_PARAMS;
+    if (!validateRequest(jsonReq)) return API_CONSTANTS.API_INSUFFICIENT_PARAMS;
     try {
         const message = await getMessage(jsonReq);
         if (!message) return API_CONSTANTS.API_RESPONSE_FALSE;

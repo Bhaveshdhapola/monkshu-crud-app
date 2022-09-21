@@ -5,5 +5,4 @@
     "/apis/updateuser": "/apis/updateuser.js?needsToken=false&addsToken=sub:access",
     "/apis/deleteuser": "/apis/deleteuser.js?needsToken=false&addsToken=sub:access",
     "/apis/getuserbyid": "/apis/getuserbyid.js?needsToken=false&addsToken=sub:access"
-
 }

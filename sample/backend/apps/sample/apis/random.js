@@ -3,8 +3,7 @@
 * License: MIT - see enclosed LICENSE file.
 */
 // Custom modules
-const API_CONSTANTS =
-    require(`${CONSTANTS.APPROOTDIR}/sample/apis/lib/constants`);
+const API_CONSTANTS = require(`${CONSTANTS.APPROOTDIR}/sample/apis/lib/constants`);
 const utils = require(`${API_CONSTANTS.LIB_PATH}/utils`);
 exports.doService = async jsonReq => {
     // Validate API request and check mandatory payload required
